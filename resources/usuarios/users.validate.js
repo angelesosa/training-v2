@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const logger = require('../lib/logger');
 
 const usersSchema = Joi.object({
   name: Joi.string().min(2).max(100).required(),
@@ -10,6 +11,7 @@ const usersSchema = Joi.object({
 const validateUser = (req, res, next) => {
   const validation = usersSchema.validate(req.body);
   if (validation.error) {
+    logger.error(`validation errors: ->${validation.error}`);
     return res.status(400).send('Verify')
   }
   next()

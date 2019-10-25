@@ -5,17 +5,26 @@ const morgan = require('morgan');
 const environment = require('./environments/environment');
 const productsRoutes = require('./resources/productos/products.routes');
 const usersRoutes = require('./resources/usuarios/users.routes');
+
+const logger = require('./resources/lib/logger');
 const passport = require('./resources/lib/jwtStrategy');
 
 const app = express();
 app.use(bodyParser.json());
 
+
+app.use(morgan('short', {
+  stream: {
+    write: message => logger.info(message.trim()),
+  }
+}));
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 
 /************************** */
 // READ
 app.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+  logger.info(`USER - LOGIN -> ${req.user}`);
   res.status(200).send('Hola papu');
 });
 
@@ -40,3 +49,4 @@ app.delete('/', () => {})
 app.listen(environment.PORT, () => {
   console.log(`Nuestra app esta escuchando el puerto ${environment.PORT}`);
 });
+logger.info('** APLICATION START **');
