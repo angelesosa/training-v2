@@ -1,6 +1,7 @@
 const express = require('express');
 const uuidv4 = require('uuid/v4');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const users = require('../../db').users;
 const validateUsers = require('./users.validate');
@@ -55,5 +56,30 @@ usersRoutes.delete('/:id', (req, res) => {
   users.splice(indexUserFound, 1);
   res.status(200).send({ message: 'user deleted' });
 });
+
+usersRoutes.post('/login', (req, res) => {
+  const username = req.body.username;
+  const password = req.body.password;
+
+  const user = users.filter(user => user.username === username)[0]
+  if(!user) {
+    res.status(404).send({ message: 'username incorrect' });
+    return;
+  }
+
+  const isAuthenticated = bcrypt.compareSync(password, user.password);
+  if(!isAuthenticated) {
+    res.status(404).send({ message: 'Verify your password' });
+    return;
+  }
+
+  if (isAuthenticated) {
+    // CREAR UN JWT
+    const token = jwt.sign({ id: user.id }, environment.SECRET_KEY, { expiresIn: '10h' })
+    res.json({ token })
+  } else {
+    res.status(401).send('Verify your password');
+  }
+})
 
 module.exports = usersRoutes;
