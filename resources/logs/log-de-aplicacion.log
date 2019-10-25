@@ -1,0 +1,12 @@
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"as.sosaramos@gmail.com","password":"123456"},{"id":"cli002","name":"Alex","nickname":"alex1970@gmail.com","password":"123456"}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 170 - 2.393 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"id: cli00122222, user not found","level":"error"}
+{"message":"::1 - GET /users/cli00122222 HTTP/1.1 404 28 - 2.883 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
