@@ -19,14 +19,19 @@ const users = [
     name: 'Angel',
     nickname: 'Angel',
     username: 'angel@gmail.com',
-    password: '123456'
+    password: '123456',
+    phone_number: 00000000000,
+    validatedPhone: false,
   },
   {
     id: 'cli002',
     name: 'Alex',
     nickname: 'Alex',
     username: 'alex1970@gmail.com',
-    password: '123456'
+    password: '123456',
+    password: '123456',
+    phone_number: 00000000000,
+    validatedPhone: false,
   },
 ];
 
