@@ -87,3 +87,188 @@
 {"message":"** APLICATION START **","level":"info"}
 {"message":"** APLICATION START **","level":"info"}
 {"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$bvKRSarX3Voyg8tjxtAEj.1kIlxWKuHgU/YGR9RFFsEyZMcaF41Ba","phone_number":"51926","id":"bda3616e-28d7-444b-b067-622164cc90e4"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 105.437 ms","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"Angel","username":"angel@gmail.com","password":"123456","phone_number":0,"validatedPhone":false},{"id":"cli002","name":"Alex","nickname":"Alex","username":"alex1970@gmail.com","password":"123456","phone_number":0,"validatedPhone":false},{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$bvKRSarX3Voyg8tjxtAEj.1kIlxWKuHgU/YGR9RFFsEyZMcaF41Ba","phone_number":"51926","id":"bda3616e-28d7-444b-b067-622164cc90e4"}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 499 - 1.136 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"error":{},"level":"error","message":"uncaughtException: Route.post() requires a callback function but got a [object Object]\nError: Route.post() requires a callback function but got a [object Object]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","stack":"Error: Route.post() requires a callback function but got a [object Object]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","exception":true,"date":"Tue Nov 05 2019 14:47:53 GMT-0500 (Peru Standard Time)","process":{"pid":24768,"uid":null,"gid":null,"cwd":"D:\\Angel_Disk\\Angel\\training-v2","execPath":"C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","version":"v10.16.3","argv":["C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","D:\\Angel_Disk\\Angel\\training-v2\\index.js"],"memoryUsage":{"rss":40914944,"heapTotal":34324480,"heapUsed":15021096,"external":114993}},"os":{"loadavg":[0,0,0],"uptime":593851},"trace":[{"column":15,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js","function":"Route.(anonymous function) [as post]","line":202,"method":"(anonymous function) [as post]","native":false},{"column":19,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js","function":"Function.proto.(anonymous function) [as post]","line":510,"method":"(anonymous function) [as post]","native":false},{"column":13,"file":"D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js","function":null,"line":29,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":778,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":789,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":653,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"tryModuleLoad","line":593,"method":null,"native":false},{"column":3,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":585,"method":"_load","native":false},{"column":17,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":692,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":25,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Route.post() requires a callback function but got a [object Undefined]\nError: Route.post() requires a callback function but got a [object Undefined]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","stack":"Error: Route.post() requires a callback function but got a [object Undefined]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","exception":true,"date":"Tue Nov 05 2019 14:48:11 GMT-0500 (Peru Standard Time)","process":{"pid":9224,"uid":null,"gid":null,"cwd":"D:\\Angel_Disk\\Angel\\training-v2","execPath":"C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","version":"v10.16.3","argv":["C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","D:\\Angel_Disk\\Angel\\training-v2\\index.js"],"memoryUsage":{"rss":41009152,"heapTotal":34324480,"heapUsed":14971208,"external":114993}},"os":{"loadavg":[0,0,0],"uptime":593869},"trace":[{"column":15,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js","function":"Route.(anonymous function) [as post]","line":202,"method":"(anonymous function) [as post]","native":false},{"column":19,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js","function":"Function.proto.(anonymous function) [as post]","line":510,"method":"(anonymous function) [as post]","native":false},{"column":13,"file":"D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js","function":null,"line":29,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":778,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":789,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":653,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"tryModuleLoad","line":593,"method":null,"native":false},{"column":3,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":585,"method":"_load","native":false},{"column":17,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":692,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":25,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Route.post() requires a callback function but got a [object Undefined]\nError: Route.post() requires a callback function but got a [object Undefined]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","stack":"Error: Route.post() requires a callback function but got a [object Undefined]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","exception":true,"date":"Tue Nov 05 2019 14:48:49 GMT-0500 (Peru Standard Time)","process":{"pid":8140,"uid":null,"gid":null,"cwd":"D:\\Angel_Disk\\Angel\\training-v2","execPath":"C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","version":"v10.16.3","argv":["C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","D:\\Angel_Disk\\Angel\\training-v2\\index.js"],"memoryUsage":{"rss":40931328,"heapTotal":34324480,"heapUsed":15044696,"external":123185}},"os":{"loadavg":[0,0,0],"uptime":593907},"trace":[{"column":15,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js","function":"Route.(anonymous function) [as post]","line":202,"method":"(anonymous function) [as post]","native":false},{"column":19,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js","function":"Function.proto.(anonymous function) [as post]","line":510,"method":"(anonymous function) [as post]","native":false},{"column":13,"file":"D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js","function":null,"line":29,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":778,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":789,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":653,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"tryModuleLoad","line":593,"method":null,"native":false},{"column":3,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":585,"method":"_load","native":false},{"column":17,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":692,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":25,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Route.post() requires a callback function but got a [object Undefined]\nError: Route.post() requires a callback function but got a [object Undefined]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","stack":"Error: Route.post() requires a callback function but got a [object Undefined]\n    at Route.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.(anonymous function) [as post] (D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js:29:13)\n    at Module._compile (internal/modules/cjs/loader.js:778:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)\n    at Module.load (internal/modules/cjs/loader.js:653:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:585:3)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)","exception":true,"date":"Tue Nov 05 2019 14:49:59 GMT-0500 (Peru Standard Time)","process":{"pid":4888,"uid":null,"gid":null,"cwd":"D:\\Angel_Disk\\Angel\\training-v2","execPath":"C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","version":"v10.16.3","argv":["C:\\Program Files (x86)\\Nodist\\v-x64\\10.16.3\\node.exe","D:\\Angel_Disk\\Angel\\training-v2\\index.js"],"memoryUsage":{"rss":40919040,"heapTotal":33800192,"heapUsed":15096888,"external":123185}},"os":{"loadavg":[0,0,0],"uptime":593976},"trace":[{"column":15,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\route.js","function":"Route.(anonymous function) [as post]","line":202,"method":"(anonymous function) [as post]","native":false},{"column":19,"file":"D:\\Angel_Disk\\Angel\\training-v2\\node_modules\\express\\lib\\router\\index.js","function":"Function.proto.(anonymous function) [as post]","line":510,"method":"(anonymous function) [as post]","native":false},{"column":13,"file":"D:\\Angel_Disk\\Angel\\training-v2\\resources\\usuarios\\users.routes.js","function":null,"line":29,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":778,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":789,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":653,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"tryModuleLoad","line":593,"method":null,"native":false},{"column":3,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":585,"method":"_load","native":false},{"column":17,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":692,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":25,"method":null,"native":false}]}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$r1xvy7FyU/fvXrwELhCVp.soPHWuMlP7v8ZmLDFv9c1ZrKRxIe1uS","phone_number":"51926","id":"369e7543-22fb-4eb0-8b2e-02591b55a721"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 77.980 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validatephonenumber HTTP/1.1 404 165 - 27.742 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 500 1277 - 85.810 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 2 - 56.566 ms","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 2 - 50.752 ms","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 2 - 79.463 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 - - 65.787 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 - - 5.720 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 - - 61.783 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 - - 4.961 ms","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 - - 1.497 ms","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 - - 0.751 ms","level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 500 1366 - 3.107 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$5NDfUc9yr2gqWA1PigrZx.kKZdP.PxC/3WLOXiRzijR5IwlDQq0ra","phone_number":"51926","id":"ebff3b13-a2e4-4a1c-9472-172886659ac6"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 75.374 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$MN/fpnna8HDaH.csawCTyOIqC10PtbQvZq.345Q.y8QX4mVgcAob.","phone_number":"51926","id":"a3a066a5-59c0-487d-90d4-92bcc398f63d"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 75.520 ms","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$2HfIXYw9OiOH9gPxXXZm.eoeeAGvk4xq.aHkq5aGKEgRBXMEK6jRu","phone_number":"51926","id":"08fc3a51-27b5-4e52-8906-4d7117b69643"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 72.104 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"Angel","username":"angel@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"id":"cli002","name":"Alex","nickname":"Alex","username":"alex1970@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 306 - 2.825 ms","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$AY5odXAvX0./ouOiMdQQ9u4.DgTZQ4gQChfYY.qwgtKAODIM3gTpu","phone_number":"51926","id":"daee0cb5-c37a-477f-a9e3-6d5804a8cfbd"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 79.914 ms","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"Angel","username":"angel@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"id":"cli002","name":"Alex","nickname":"Alex","username":"alex1970@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$AY5odXAvX0./ouOiMdQQ9u4.DgTZQ4gQChfYY.qwgtKAODIM3gTpu","phone_number":"51926","id":"daee0cb5-c37a-477f-a9e3-6d5804a8cfbd"}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 525 - 0.657 ms","level":"info"}
+{"message":"validation errors: ->ValidationError: \"code\" must be a string","level":"error"}
+{"message":"::1 - POST /users/validate HTTP/1.1 400 6 - 24.009 ms","level":"info"}
+{"message":"validation errors: ->ValidationError: \"code\" must be a string","level":"error"}
+{"message":"::1 - POST /users/validate HTTP/1.1 400 6 - 1.084 ms","level":"info"}
+{"message":"validation errors: ->ValidationError: \"code\" must be a string","level":"error"}
+{"message":"::1 - POST /users/validate HTTP/1.1 400 6 - 0.776 ms","level":"info"}
+{"message":"::1 - POST /users/validate HTTP/1.1 200 - - 0.635 ms","level":"info"}
+{"message":"::1 - POST /users/validate HTTP/1.1 200 - - 0.800 ms","level":"info"}
+{"message":"::1 - POST /users/validate HTTP/1.1 200 - - 0.481 ms","level":"info"}
+{"message":"validation errors: ->ValidationError: \"id\" is required","level":"error"}
+{"message":"::1 - POST /users/validate HTTP/1.1 400 6 - 0.933 ms","level":"info"}
+{"message":"::1 - POST /users/validate HTTP/1.1 200 - - 0.459 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users/validate HTTP/1.1 200 - - 5.503 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$7.5FxTFBKAm10NdA5cY3qusFXZ6Z5W8c93Ardw3ZFf72NsE3TfpYK","phone_number":"51926","id":"6b14f480-48a6-4daf-9a38-7e160339af57"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 77.096 ms","level":"info"}
+{"message":"::1 - POST /users/validate HTTP/1.1 200 218 - 2.186 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$UFxlP.zynZliQe.9zEQoG.8VU85mI8Cnx1LFQpK/KUQgeEt6aYjv.","phone_number":"51926","id":"ad6c41e1-4786-4a6c-b123-d072e82a9789"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 77.055 ms","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 218 - 1.926 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$4I4R.vS3.wz9g1WuHdzgEe8Q13fBWH6VLQK8wmSojikOb08FViW9q","phone_number":"51926","id":"c4a2095c-a4be-463a-aa91-531cfdc5921e"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 76.653 ms","level":"info"}
+{"message":"validate-phone-number - body: [object Object]","level":"info"}
+{"message":"username: undefined, Verify your username","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 404 32 - 2.294 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"validate-phone-number - body: [object Object]","level":"info"}
+{"message":"username: undefined, Verify your username","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 404 32 - 9.641 ms","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$JfsYfIy31HR.cg/v9/ls2Ox5USzl1VeUUaDOFiNQ9hAy.bInavNfO","phone_number":"51926","id":"08078555-b29d-49db-afc6-6d7ac6d6c237"},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 218 - 72.838 ms","level":"info"}
+{"message":"validate-phone-number - body: [object Object]","level":"info"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 57 - 2.021 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$uhCsv42Vsw92c5pylFtJPOppAzRFDmFJjPMYBkCyEjryBVKKXNMES","phone_number":"51926","id":"add10114-4129-4fc9-9c7d-fdec3d382692","code_sms":1273},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 234 - 76.036 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$3VZp/mAhzLfKR44JDdxZlecIl0wWudaBeAduXRhoM/HXFe8l9E.kS","phone_number":"51926","id":"73ab7cb4-cede-46e9-aa13-5772a7e7f4ff","code_sms":1851},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 234 - 78.617 ms","level":"info"}
+{"message":"validate-phone-number - body: [object Object]","level":"info"}
+{"message":"username: undefined, Verify your username","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 404 32 - 3.363 ms","level":"info"}
+{"message":"validate-phone-number - body: [object Object]","level":"info"}
+{"message":"username: undefined, Verify your username","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 404 32 - 1.904 ms","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$JVlsrgIm.DQJgNMCAPIsBu6KOwGAXhmWwWyh3uf/ICggZW9N7jQUm","phone_number":"51926157914","id":"8d2066ee-1101-40ab-92cd-48182eeb70dd","code_sms":1322},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 240 - 68.751 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$ThxycB9qKJKQvB2HHDaQduEKspM8q6w9YltwyeldkwCTLKNLEtvgy","phone_number":"51926157914","id":"bf4d94e6-9559-4ccd-a4af-0eb034e6ecbd","code_sms":1651,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 81.305 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$N4LYkKyvPtm4ErnXDyXwa.SqA3LgD53pcX/2I5MEQcCFGI8cLURjm","phone_number":"51926157914","id":"149fc20e-8181-4da4-9f1c-a5ad8bbf629f","code_sms":1842,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 76.568 ms","level":"info"}
+{"message":"validation errors: ->ValidationError: \"code\" is required","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 400 6 - 5.783 ms","level":"info"}
+{"message":"validate-phone-number - body: [object Object]","level":"info"}
+{"message":"username: [object Object], Verify your code","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 28 - 1.703 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$wVhd.9.IArE6kAPvcpOjKuh7Gz.Ey6/n232szhd1lLeVRtqDfe7tC","phone_number":"51926157914","id":"eee106f7-d514-4c72-b44a-f9da26fbb21a","code_sms":1799,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 77.420 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"eee106f7-d514-4c72-b44a-f9da26fbb21a\",\"code\":1799}","level":"info"}
+{"message":"username: [object Object], Verify your code","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 28 - 3.062 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$m5AWdkbfeohpvXvZBPbjHOivRkYXMdNk6wH/iz5h/AbHVVl9Ct6f.","phone_number":"51926157914","id":"f613c019-0b58-4def-ba92-903073a31b17","code_sms":1945,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 75.615 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"eee106f7-d514-4c72-b44a-f9da26fbb21a\",\"code\":1799}","level":"info"}
+{"message":"username: undefined, Verify your username","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 404 32 - 2.226 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"f613c019-0b58-4def-ba92-903073a31b17\",\"code\":1799}","level":"info"}
+{"message":"username: [object Object], Verify your code","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 404 28 - 1.762 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"f613c019-0b58-4def-ba92-903073a31b17\",\"code\":1945}","level":"info"}
+{"message":"user: [object Object], user correct","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 18 - 2.069 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$kUIRUsB5rnDO7aNvo03wEeOve8s5xCJ.xobQjTQf9HoigSaadA2R2","phone_number":"51926157914","id":"c4cbff31-b121-48d1-be0e-a5d03465149b","code_sms":1791,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 75.768 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"c4cbff31-b121-48d1-be0e-a5d03465149b\",\"code\":1791}","level":"info"}
+{"message":"user: [object Object], user correct","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 32 - 3.768 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$uIlf2DHhzlwRtDovhlYkLuL63wQXt6uAbgs4cZWj5ovMjgnU5oeQi","phone_number":"51926157914","id":"d2dd308a-acea-407d-8672-942235952dab","code_sms":1459,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 77.535 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"d2dd308a-acea-407d-8672-942235952dab\",\"code\":1459}","level":"info"}
+{"message":"user: [object Object], user correct","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 32 - 3.078 ms","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"Angel","username":"angel@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"id":"cli002","name":"Alex","nickname":"Alex","username":"alex1970@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$uIlf2DHhzlwRtDovhlYkLuL63wQXt6uAbgs4cZWj5ovMjgnU5oeQi","phone_number":"51926157914","id":"d2dd308a-acea-407d-8672-942235952dab","code_sms":1459,"validatedPhone":true}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 569 - 0.729 ms","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$ymNUOx6vJNUEL1R9HBRXGOaF/ZAS.0c6Wnr24iEH7EZKmDwaw5awu","phone_number":"51926157914","id":"d935df05-ffb3-48fe-92c5-5ab73d1afcaf","code_sms":1913,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 71.596 ms","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"Angel","username":"angel@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"id":"cli002","name":"Alex","nickname":"Alex","username":"alex1970@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$uIlf2DHhzlwRtDovhlYkLuL63wQXt6uAbgs4cZWj5ovMjgnU5oeQi","phone_number":"51926157914","id":"d2dd308a-acea-407d-8672-942235952dab","code_sms":1459,"validatedPhone":true},{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$ymNUOx6vJNUEL1R9HBRXGOaF/ZAS.0c6Wnr24iEH7EZKmDwaw5awu","phone_number":"51926157914","id":"d935df05-ffb3-48fe-92c5-5ab73d1afcaf","code_sms":1913,"validatedPhone":false}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 833 - 0.301 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$mbVI.lNG7AkMOoZR3JyGPu96F78fLUzDwjLJxAQ/7X0.p.LNdSngS","phone_number":"51926157914","id":"7436d6a8-dd95-457d-8761-f297a1196aa0","code_sms":1952,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 263 - 79.685 ms","level":"info"}
+{"message":"user: {\"name\":\"Angelito\",\"nickname\":\"Angelito\",\"username\":\"as.sosaramos@gmail.com\",\"password\":\"$2b$10$mbVI.lNG7AkMOoZR3JyGPu96F78fLUzDwjLJxAQ/7X0.p.LNdSngS\",\"phone_number\":\"51926157914\",\"id\":\"7436d6a8-dd95-457d-8761-f297a1196aa0\",\"code_sms\":1952,\"validatedPhone\":false}, confirma tu numero telefonico","level":"error"}
+{"message":"::1 - POST /users/login HTTP/1.1 404 43 - 1.885 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$ge7yQDnyVc/b3gBBZZhXhulIG4XjM750wVJ8LfkpMExttP3x.FR/W","phone_number":"51926157914","id":"2fed29b2-367c-49d0-ba61-f6b1f5db5d8a","code_sms":1653,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 45 - 77.610 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 500 1338 - 76.683 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}
+{"message":{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$0yUVQrqm.n7zL9yMLbP4Qexz8dwaRpyZm.NLRTK0k2CRYWgOKNsKq","phone_number":"51926157914","id":"0f609ee6-5044-48b9-a3f3-73968ebfc6db","code_sms":1964,"validatedPhone":false},"level":"info"}
+{"message":"::1 - POST /users HTTP/1.1 200 45 - 198.393 ms","level":"info"}
+{"message":"user: {\"name\":\"Angelito\",\"nickname\":\"Angelito\",\"username\":\"as.sosaramos@gmail.com\",\"password\":\"$2b$10$0yUVQrqm.n7zL9yMLbP4Qexz8dwaRpyZm.NLRTK0k2CRYWgOKNsKq\",\"phone_number\":\"51926157914\",\"id\":\"0f609ee6-5044-48b9-a3f3-73968ebfc6db\",\"code_sms\":1964,\"validatedPhone\":false}, confirma tu numero telefonico","level":"error"}
+{"message":"::1 - POST /users/login HTTP/1.1 404 44 - 1.997 ms","level":"info"}
+{"message":"validate-phone-number - body: {\"id\":\"0f609ee6-5044-48b9-a3f3-73968ebfc6db\",\"code\":1964}","level":"info"}
+{"message":"user: [object Object], user correct","level":"error"}
+{"message":"::1 - POST /users/validate-phone-number HTTP/1.1 200 32 - 2.727 ms","level":"info"}
+{"message":[{"id":"cli001","name":"Angel","nickname":"Angel","username":"angel@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"id":"cli002","name":"Alex","nickname":"Alex","username":"alex1970@gmail.com","password":"123456","phone_number":0,"validatedPhone":false,"code_sms":0},{"name":"Angelito","nickname":"Angelito","username":"as.sosaramos@gmail.com","password":"$2b$10$0yUVQrqm.n7zL9yMLbP4Qexz8dwaRpyZm.NLRTK0k2CRYWgOKNsKq","phone_number":"51926157914","id":"0f609ee6-5044-48b9-a3f3-73968ebfc6db","code_sms":1964,"validatedPhone":true}],"level":"info"}
+{"message":"::1 - GET /users HTTP/1.1 200 569 - 0.947 ms","level":"info"}
+{"message":"** APLICATION START **","level":"info"}

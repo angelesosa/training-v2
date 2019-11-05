@@ -5,8 +5,9 @@ const jwt = require('jsonwebtoken');
 const logger = require('../lib/logger');
 
 const users = require('../../db').users;
-const validateUsers = require('./users.validate');
+const validates = require('./users.validate');
 const environment = require('../../environments/environment');
+const nexmo = require('../lib/nexmo');
 
 const usersRoutes = express.Router();
 
@@ -26,15 +27,22 @@ usersRoutes.get('/:id', (req, res) => {
   logger.info(user);
 });
 
-usersRoutes.post('/', validateUsers, (req, res) => {
+usersRoutes.post('/', validates.validateUser, (req, res) => {
   const user = {
     ...req.body,
     id: uuidv4(),
-    password: bcrypt.hashSync(req.body.password, environment.BCRYPT_SALT)
+    password: bcrypt.hashSync(req.body.password, environment.BCRYPT_SALT),
+    code_sms: Math.floor((Math.random() * 1000) + 1000),
+    validatedPhone: false,
   };
+
+  const to = user.phone_number;
+  const text = `Bienvenido a krowdy, tu codigo de confirmacion es: ${user.code_sms} `;
+  nexmo.message.sendSms(environment.NEXMO_FROM, to, text);
+
   users.push(user);
-  res.status(200).send(user);
   logger.info(user);
+  res.status(200).send({id: user.id});
 });
 
 usersRoutes.put('/:id', (req, res) => {
@@ -78,6 +86,12 @@ usersRoutes.post('/login', (req, res) => {
     return;
   }
 
+  if(!user.validatedPhone) {
+    logger.error(`user: ${JSON.stringify(user)}, confirma tu numero telefonico`);
+    res.status(404).send({ message: 'confirma tu número telefonico' });
+    return;
+  }
+
   const isAuthenticated = bcrypt.compareSync(password, user.password);
   if(!isAuthenticated) {
     res.status(404).send({ message: 'Verify your password' });
@@ -93,5 +107,30 @@ usersRoutes.post('/login', (req, res) => {
     res.status(401).send('Verify your password');
   }
 })
+
+usersRoutes.post('/validate-phone-number', validates.validatePhoneNumber, (req, res) => {
+  logger.info(`validate-phone-number - body: ${ JSON.stringify(req.body)}`);
+  const indexUserFound = users.findIndex(user => user.id ===  req.body.id);
+  if (indexUserFound === -1) {
+    res.status(404).send({ message: 'user not found' });
+    logger.error(`id: ${req.params.id}, user not found`);
+    return;
+  }
+
+  const user = users[indexUserFound];
+
+  if(user.code_sms != req.body.code) {
+    logger.error(`username: ${user}, Verify your code`);
+    res.status(404).send({ message: 'code incorrect' });
+    return;
+  }
+
+  if(user.code_sms == req.body.code) {
+    logger.error(`user: ${user}, user correct`);
+    users[indexUserFound].validatedPhone = true;
+    res.status(200).send({ message: `número verificado` });
+    return;
+  }
+});
 
 module.exports = usersRoutes;
