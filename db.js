@@ -22,6 +22,7 @@ const users = [
     password: '123456',
     phone_number: 00000000000,
     validatedPhone: false,
+    code_sms: 0,
   },
   {
     id: 'cli002',
@@ -32,6 +33,7 @@ const users = [
     password: '123456',
     phone_number: 00000000000,
     validatedPhone: false,
+    code_sms: 0,
   },
 ];
 
