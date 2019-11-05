@@ -6,6 +6,7 @@ const usersSchema = Joi.object({
   nickname: Joi.string().min(3).max(20).required(),
   password: Joi.string().min(5).max(15).required(),
   username: Joi.string().min(5).max(100).required(),
+  phone_number: Joi.string().min(5).max(20).required(),
 });
 
 const validateUser = (req, res, next) => {
