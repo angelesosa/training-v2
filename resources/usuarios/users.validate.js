@@ -18,5 +18,17 @@ const validateUser = (req, res, next) => {
   next()
 }
 
+const validatePhoneNumber = (req, res, next) => {
+  const schema = Joi.object({
+    id: Joi.string().required(),
+    code: Joi.number().required(),
+  });
+  const validation = schema.validate(req.body);
+  if (validation.error) {
+    logger.error(`validation errors: ->${validation.error}`);
+    return res.status(400).send('Verify')
+  }
+  next()
+}
 
-module.exports = validateUser;
+module.exports = {validateUser, validatePhoneNumber};
