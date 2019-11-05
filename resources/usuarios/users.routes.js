@@ -87,7 +87,7 @@ usersRoutes.post('/login', (req, res) => {
 
   if (isAuthenticated) {
     // CREAR UN JWT
-    const token = jwt.sign({ id: user.id }, environment.SECRET_KEY, { expiresIn: '10h' })
+    const token = jwt.sign({ id: user.id }, environment.SECRET_KEY, { expiresIn: environment.EXPIRES_IN })
     res.json({ token })
   } else {
     res.status(401).send('Verify your password');
