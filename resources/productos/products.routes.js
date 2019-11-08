@@ -3,6 +3,8 @@ const uuidv4 = require('uuid/v4');
 const logger = require('../lib/logger');
 
 const validateProduct = require('./products.validate');
+const env = require('../../environments/environment');
+const s3 = require('../lib/awsServer');
 let products = require('../../db').products;
 
 const productsRoutes = express.Router()
@@ -18,6 +20,56 @@ productsRoutes.post('/', validateProduct, (req, res) => {
   res.json(newProduct);
   logger.info(newProduct);
 })
+
+productsRoutes.get('/generate-put-presignedurl', (req, res) => {
+  var fileurls = [];
+  const signedUrlExpireSeconds = 60 * 60; // 1 hora
+  const myBucket = env.S3_BUCKET_NAME;
+  const myKey = 'api/uploads/' + req.body.fileName;
+  const params = {
+    Bucket: myBucket,
+    Key: myKey,
+    Expires: signedUrlExpireSeconds,
+  };
+
+  s3.getSignedUrl('putObject', params, function (err, url) {
+    if (err) {
+      logger.error(`Error getting presigned url from AWS S3`);
+      logger.error(`generate-get-presignedurl:, ${JSON.stringify(err)}`);
+      res.json({ success: false, message: 'Pre-Signed URL error', urls: fileurls });
+    }
+    else {
+      fileurls[0] = url;
+      logger.info('Presigned URL: ', fileurls[0]);
+      res.json({ success: true, message: 'AWS SDK S3 Pre-signed urls generated successfully.', urls: fileurls });
+    }
+  });
+});
+
+productsRoutes.get('/generate-get-presignedurl', (req, res) => {
+  var fileurls = [];
+  const signedUrlExpireSeconds = 60 * 10; // 10 minutos
+  const myBucket = env.S3_BUCKET_NAME;
+  const myKey = 'api/uploads/' + req.body.fileName;
+  const params = {
+    Bucket: myBucket,
+    Key: myKey,
+    Expires: signedUrlExpireSeconds,
+  };
+
+  s3.getSignedUrl('getObject', params, function (err, url) {
+    if (err) {
+      logger.error(`Error getting presigned url from AWS S3`);
+      logger.error(`generate-get-presignedurl:, ${JSON.stringify(err)}`);
+      res.json({ success: false, message: 'Pre-Signed URL error', urls: fileurls });
+    }
+    else {
+      fileurls[0] = url;
+      logger.info('Presigned URL: ', fileurls[0]);
+      res.json({ success: true, message: 'AWS SDK S3 Pre-signed urls generated successfully.', urls: fileurls });
+    }
+  });
+});
 
 productsRoutes.get('/:id', (req, res) => {
   const prod = products.filter(product => product.id === req.params.id)[0];
