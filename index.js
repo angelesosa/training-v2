@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const environment = require('./environments/environment');
 const productsRoutes = require('./resources/productos/products.routes');
 const usersRoutes = require('./resources/usuarios/users.routes');
+const errorHandler = require('./resources/lib/errorHandler');
 
 const logger = require('./resources/lib/logger');
 const passport = require('./resources/lib/jwtStrategy');
@@ -20,6 +21,8 @@ app.use(morgan('short', {
 }));
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
+
+app.use(errorHandler.catchResolver);
 
 /************************** */
 // READ
