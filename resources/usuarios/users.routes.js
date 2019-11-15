@@ -8,6 +8,10 @@ const users = require('../../db').users;
 const validates = require('./users.validate');
 const environment = require('../../environments/environment');
 const nexmo = require('../lib/nexmo');
+const UserNoFoundError = require('./users.error').UserNoFoundError;
+const UserNoAllowedIDError = require('./users.error').UserNoAllowedIDError;
+const UserLoginError = require('./users.error').UserLoginError;
+const UserSMSError = require('./users.error').UserSMSError;
 
 const usersRoutes = express.Router();
 
@@ -19,9 +23,7 @@ usersRoutes.get('/', (req, res) => {
 usersRoutes.get('/:id', (req, res) => {
   const user = users.filter(user => user.id === req.params.id)[0];
   if(!user) {
-    res.status(404).send({ message: 'user not found' });
-    logger.error(`id: ${req.params.id}, user not found`);
-    return;
+    throw new UserNoFoundError(`user with id: ${req.params.id} not found`);
   }
   res.status(200).send(user);
   logger.info(user);
@@ -47,15 +49,11 @@ usersRoutes.post('/', validates.validateUser, (req, res) => {
 
 usersRoutes.put('/:id', (req, res) => {
   if(req.body.id) {
-    res.status(400).send({ message: 'not allowed send id' });
-    logger.error(`id: ${req.body.id}, not allowed send id`);
-    return;
+    throw new UserNoAllowedIDError(`product with id: ${req.params.id} not found`);
   }
   const indexUserFound = users.findIndex(user => user.id === req.params.id);
   if(indexUserFound === -1) {
-    res.status(404).send({ message: 'user not found' });
-    logger.error(`id: ${req.params.id}, user not found`);
-    return;
+    throw new UserNoFoundError(`user with id: ${req.params.id} not found`);
   }
   updatedUser = { ...users[indexUserFound], ...req.body };
   users[indexUserFound] = updatedUser;
@@ -66,9 +64,7 @@ usersRoutes.put('/:id', (req, res) => {
 usersRoutes.delete('/:id', (req, res) => {
   const indexUserFound = users.findIndex(user => user.id === req.params.id);
   if (indexUserFound === -1) {
-    res.status(404).send({ message: 'user not found' });
-    logger.error(`id: ${req.params.id}, user not found`);
-    return;
+    throw new UserNoFoundError(`user with id: ${req.params.id} not found`);
   }
   users.splice(indexUserFound, 1);
   res.status(200).send({ message: 'user deleted' });
@@ -81,48 +77,33 @@ usersRoutes.post('/login', (req, res) => {
 
   const user = users.filter(user => user.username === username)[0]
   if(!user) {
-    res.status(404).send({ message: 'username incorrect' });
-    logger.error(`username: ${req.body.username}, Verify your username`);
-    return;
+    throw new UserLoginError(`username incorrect`, `username: ${req.body.username}, Verify your username`);
   }
 
   if(!user.validatedPhone) {
-    logger.error(`user: ${JSON.stringify(user)}, confirma tu numero telefonico`);
-    res.status(404).send({ message: 'confirma tu número telefonico' });
-    return;
+    throw new UserLoginError(`confirma tu número telefonico`, `user: ${JSON.stringify(user)}, confirma tu numero telefonico`);
   }
 
   const isAuthenticated = bcrypt.compareSync(password, user.password);
   if(!isAuthenticated) {
-    res.status(404).send({ message: 'Verify your password' });
-    logger.error(`username: ${req.body.username}, username incorrect`);
-    return;
+    throw new UserLoginError(`Verify your password`, `login: ${req.body.username}, Verify your password`);
   }
 
-  if (isAuthenticated) {
-    // CREAR UN JWT
-    const token = jwt.sign({ id: user.id }, environment.SECRET_KEY, { expiresIn: environment.EXPIRES_IN })
-    res.json({ token })
-  } else {
-    res.status(401).send('Verify your password');
-  }
+  const token = jwt.sign({ id: user.id }, environment.SECRET_KEY, { expiresIn: environment.EXPIRES_IN })
+  res.json({ token })
 })
 
 usersRoutes.post('/validate-phone-number', validates.validatePhoneNumber, (req, res) => {
   logger.info(`validate-phone-number - body: ${ JSON.stringify(req.body)}`);
   const indexUserFound = users.findIndex(user => user.id ===  req.body.id);
   if (indexUserFound === -1) {
-    res.status(404).send({ message: 'user not found' });
-    logger.error(`id: ${req.params.id}, user not found`);
-    return;
+    throw new UserNoFoundError(`user with id: ${req.body.id} not found`);
   }
 
   const user = users[indexUserFound];
 
   if(user.code_sms != req.body.code) {
-    logger.error(`username: ${user}, Verify your code`);
-    res.status(404).send({ message: 'code incorrect' });
-    return;
+    throw new UserSMSError(`code incorrect`, `username: ${user}, Verify your code`);
   }
 
   if(user.code_sms == req.body.code) {
