@@ -49,7 +49,7 @@ usersRoutes.post('/', validates.validateUser, (req, res) => {
 
 usersRoutes.put('/:id', (req, res) => {
   if(req.body.id) {
-    throw new UserNoAllowedIDError(`product with id: ${req.params.id} not found`);
+    throw new UserNoAllowedIDError(`not allowed send id`);
   }
   const indexUserFound = users.findIndex(user => user.id === req.params.id);
   if(indexUserFound === -1) {
