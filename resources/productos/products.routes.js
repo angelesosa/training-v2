@@ -5,6 +5,10 @@ const logger = require('../lib/logger');
 const validateProduct = require('./products.validate');
 const env = require('../../environments/environment');
 const s3 = require('../lib/awsServer');
+const procesarError = require('../lib/errorHandler').procesarError;
+const ProductoUrlPresignedError = require('./productos.error').ProductoUrlPresignedError;
+const ProductoNoFoundError = require('./productos.error').ProductoNoFoundError;
+const ProductoNoAllowedIDError = require('./productos.error').ProductoNoAllowedIDError;
 let products = require('../../db').products;
 
 const productsRoutes = express.Router()
@@ -21,7 +25,7 @@ productsRoutes.post('/', validateProduct, (req, res) => {
   logger.info(newProduct);
 })
 
-productsRoutes.get('/generate-put-presignedurl', (req, res) => {
+productsRoutes.get('/generate-put-presignedurl', procesarError((req, res) => {
   var fileurls = [];
   const signedUrlExpireSeconds = 60 * 60; // 1 hora
   const myBucket = env.S3_BUCKET_NAME;
@@ -34,9 +38,7 @@ productsRoutes.get('/generate-put-presignedurl', (req, res) => {
 
   s3.getSignedUrl('putObject', params, function (err, url) {
     if (err) {
-      logger.error(`Error getting presigned url from AWS S3`);
-      logger.error(`generate-get-presignedurl:, ${JSON.stringify(err)}`);
-      res.json({ success: false, message: 'Pre-Signed URL error', urls: fileurls });
+      throw new ProductoUrlPresignedError(`Pre-Signed URL error`, JSON.stringify(err));
     }
     else {
       fileurls[0] = url;
@@ -44,9 +46,9 @@ productsRoutes.get('/generate-put-presignedurl', (req, res) => {
       res.json({ success: true, message: 'AWS SDK S3 Pre-signed urls generated successfully.', urls: fileurls });
     }
   });
-});
+}));
 
-productsRoutes.get('/generate-get-presignedurl', (req, res) => {
+productsRoutes.get('/generate-get-presignedurl', procesarError((req, res) => {
   var fileurls = [];
   const signedUrlExpireSeconds = 60 * 10; // 10 minutos
   const myBucket = env.S3_BUCKET_NAME;
@@ -59,9 +61,7 @@ productsRoutes.get('/generate-get-presignedurl', (req, res) => {
 
   s3.getSignedUrl('getObject', params, function (err, url) {
     if (err) {
-      logger.error(`Error getting presigned url from AWS S3`);
-      logger.error(`generate-get-presignedurl:, ${JSON.stringify(err)}`);
-      res.json({ success: false, message: 'Pre-Signed URL error', urls: fileurls });
+      throw new ProductoUrlPresignedError(`Pre-Signed URL error`, JSON.stringify(err));
     }
     else {
       fileurls[0] = url;
@@ -69,46 +69,38 @@ productsRoutes.get('/generate-get-presignedurl', (req, res) => {
       res.json({ success: true, message: 'AWS SDK S3 Pre-signed urls generated successfully.', urls: fileurls });
     }
   });
-});
+}));
 
-productsRoutes.get('/:id', (req, res) => {
+productsRoutes.get('/:id', procesarError((req, res) => {
   const prod = products.filter(product => product.id === req.params.id)[0];
   if(!prod) {
-    res.status(404).send({ message: 'product not found' });
-    logger.error(`id: ${req.params.id}, product not found`);
-    return;
+    throw new ProductoNoFoundError(`product with id: ${req.params.id} not found`);
   }
   res.status(200).send(prod);
   logger.info(prod);
-});
+}));
 
 ///products/098as908asd098asd089
-productsRoutes.put('/:id', (req, res) => {
+productsRoutes.put('/:id', procesarError((req, res) => {
   if(req.body.id) {
-    res.status(400).send({ message: 'not allowed send id' });
-    logger.error(`id: ${req.body.id}, not allowed send id`);
-    return;
+    throw new ProductoNoAllowedIDError(`not allowed send id`);
   }
   const indexProdFound = products.findIndex(product => product.id === req.params.id);
   if(indexProdFound === -1) {
-    res.status(404).send({ message: 'product not found' });
-    logger.error(`id: ${req.params.id}, product not found`);
-    return;
+    throw new ProductoNoFoundError(`product with id: ${req.params.id} not found`);
   }
   updatedProduct = { ...products[indexProdFound], ...req.body };
   products[indexProdFound] = updatedProduct;
   res.status(200).send(updatedProduct);
   logger.info(updatedProduct);
-})
+}));
 
 // DESTROY
 
 productsRoutes.delete('/:id', (req, res) => {
   const indexProductFound = products.findIndex(product => product.id === req.params.id);
   if (indexProductFound === -1) {
-    res.status(404).send({ message: 'product not found' });
-    logger.error(`id: ${req.params.id}, product not found`);
-    return;
+    throw new ProductoNoFoundError(`product with id: ${req.params.id} not found`);
   }
   products.splice(indexProductFound, 1);
   res.status(200).send({ message: 'user deleted' });
